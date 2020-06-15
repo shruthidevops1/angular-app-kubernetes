@@ -14,7 +14,7 @@ spec:
     spec: 
       containers: 
       - name: angular 
-        image: applesoftsol/angularapp:#{Build.BuildId}#
+        image: marriprashanth/angularapp:#{Build.BuildId}#
         ports: 
         - containerPort: 80 
 --- 
