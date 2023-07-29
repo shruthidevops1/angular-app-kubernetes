@@ -14,7 +14,7 @@ spec:
     spec: 
       containers: 
       - name: angular 
-        image: shruthidevops1/image:12
+        image: shruthidevops1/image:#{Build.BuildId}#
         ports: 
         - containerPort: 80 
 --- 
