@@ -1,10 +1,9 @@
-# stage 1
-FROM node:latest as node
-WORKDIR /app
-COPY . .
-RUN npm install
-RUN npm run build --prod
-
-# stage 2
-FROM nginx:alpine
-COPY --from=node /app/dist/angular-app /usr/share/nginx/html
+FROM ubuntu
+MAINTAINER  Appleteam
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update
+RUN apt-get install -y apache2
+RUN apt-get install -y apache2-utils
+EXPOSE 80
+ENTRYPOINT ["apache2ctl"]
+CMD ["-DFOREGROUND"]
