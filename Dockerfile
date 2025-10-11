@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:24.04
 MAINTAINER  Appleteam
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
